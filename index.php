@@ -7,7 +7,7 @@
     
     <div class="hello-box">
     	<div class="size">
-        	<h1>Welcom to YY Skills</h1>
+        	<h1>Welcom to YY Skills 변경</h1>
     	</div>
     </div>
 </body>
