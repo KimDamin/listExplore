@@ -1,0 +1,299 @@
+/*초기화 코드*/
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #efefef;
+}
+
+/*사이즈 설정*/
+.size {
+	width: 900px;
+	height: 100%;
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+.content > .size {
+	background-color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 0;
+	position: relative;
+	border-radius: 15px;
+}
+.content > .size > h1 {
+	margin-bottom: 15px;
+}
+
+/*네비게이션 설정(헤더)*/
+.header {
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	/*position: fixed;*/
+	z-index: 300000;
+}
+
+.logo {
+	float: left;
+}
+.logo a {
+	line-height: 80px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #000;
+}
+
+.menu {
+	float: right;
+}
+.menu li {
+	float: left;
+	margin: 0 25px;
+}
+.menu li a {
+	line-height: 80px;
+	font-size: 18px;
+	color: #000;
+}
+
+/*첫화면 비쥬얼 */
+.hello-box {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	background-color: #aaa;
+}
+.hello-box > .size {
+	height: 100%;
+	text-align: center;
+	line-height: 300px;
+}
+
+/*게시판 목록*/
+table {
+	width: 700px;
+	border-spacing: 0;
+	margin-bottom: 20px;
+}
+table tr:nth-child(2n){
+	background-color: #eee;
+}
+th {
+	border-top: 2px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 5px 15px;
+}
+th:nth-of-type(1){
+	width: 10%;
+}
+th:nth-of-type(2){
+	width: 55%;
+}
+th:nth-of-type(3){
+	width: 10%;
+}
+th:nth-of-type(4){
+	width: 35%;
+}
+td {
+	text-align: center;
+	border-bottom: 1px solid #000;
+	padding: 5px 15px;
+}
+/*게시판 리스트 제목 칸*/
+.title {
+	text-align: left;
+}
+.title a {
+	color: #000;
+}
+/*게시판 리스트 글쓰기 버튼*/
+.writeBtn {
+	position: absolute;
+	right: 100px;
+	top: 60px;
+}
+
+/*버튼 설정*/
+.btn {
+	width: 70px;
+	height: 35px;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+
+/*글쓰기&글수정 폼*/
+.writeForm {
+	width: 700px;
+	text-align: center;
+	padding-left: 30px;
+}
+/*제목 글쓴이 칸*/
+.writeForm > .aAll {
+	width: 100%;
+	height: 80px;
+	background-color: #eee;
+	padding: 7px 125px;
+	text-align: left;
+	margin-bottom: 15px;
+}
+.writeForm > .aAll > div {
+	width: 100%;
+	height: 50%;
+	float: left;
+	display: block;
+}
+.writeForm > .aAll > div > span {
+	float: left;
+	line-height: 33px;  
+	font-size: 17px;
+}
+.writeForm > .aAll > div > .a {
+	float: right;
+	height: 30px;
+	width: 300px;
+	line-height: 33px;
+	margin-top: 1.5px;
+}
+/*글쓰기 텍스트칸*/
+.writeForm > textarea {
+	width: 100%;
+	height: 300px;
+	padding: 20px;
+	margin-bottom: 15px;
+}
+.writeForm > .line {
+	width: 100%;
+	height: 8px;
+	background-color: #333;
+	border: none;
+	margin-bottom: 8px;
+}
+.writeForm > .btn {
+	float: right;
+}
+
+/*글보기 설정*/
+.content > .size > .showAll {
+	width: 100%;
+	height: 35px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.content > .size > .showAll > .showBtn {
+	width: 70px;
+	height: 35px;
+	display: block;
+	float: left;
+	margin: 15px 3px;
+}
+.content > .size > .showContent {
+	width: 700px;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+/*페이지네이션 바 설정*/
+.list_numbering_bar > .pagination {
+	display: flex;
+	flex-direction: row;
+}
+.pagination > .page_item {
+	width: 40px;
+	height: 35px;
+	background-color: #fff;
+	border: 2px solid #333;
+	border-radius: 5px;
+	margin: 0 3px;
+	cursor: pointer;
+}
+.pagination > .page_item:nth-of-type(1){
+	border-top-left-radius: 20px;
+	width: 45px;
+	border-bottom-left-radius: 20px;
+}
+.pagination > .page_item:nth-of-type(7){
+	border-top-right-radius: 20px;
+	width: 45px;
+	border-bottom-right-radius: 20px;
+}
+.pagination > .page_item > .page_link {
+	text-align: center;
+	line-height: 30px;
+	color : #000;
+	width: 100%;
+	height: 100%;
+	display: block;
+	font-weight: bold;
+}
+.list_numbering_bar > .pagination > .disabled {
+	border: 2px solid #999;
+	cursor: default;
+}
+.list_numbering_bar > .pagination > .disabled > .page_link {
+	color: #999;
+	cursor: default;
+}
+
+/*로그인 메뉴*/
+.user_menu {
+	float: right;
+}
+.user_menu > .user_item {
+	float: left;
+	width: 70px;
+	height: 30px;
+	background-color: #fff;
+	border: 1.2px solid #999;
+	border-radius: 2px;
+	margin-top: 20px;
+	text-align: center;
+	margin: 25px 5px;
+}
+.user_menu > .user_item > .user_link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	font-size: 13.5px;
+	line-height: 30px;
+}
